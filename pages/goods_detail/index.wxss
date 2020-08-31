@@ -1,0 +1,110 @@
+page {
+  padding-bottom: 100rpx;
+}
+.detail_swiper swiper {
+  height: 50vw;
+  text-align: center;
+}
+.detail_swiper swiper image {
+  width: 70%;
+}
+.goods_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 16rpx;
+}
+.goods_name_row {
+  display: flex;
+  border-top: 2rpx solid #eee;
+  padding: 24rpx 0;
+}
+.goods_name_row .goods_name {
+  flex: 9;
+  font-size: 30rpx;
+  color: #000;
+  padding: 0 12rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.goods_name_row .goods_collect {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1rpx solid #000;
+}
+.goods_name_row .goods_collect .icon-shoucang1 {
+  color: #fed71a;
+}
+.goods_name_row .goods_collect .collect_text {
+  font-size: 26rpx;
+}
+.goods_info .goods_info_title {
+  font-size: 32rpx;
+  color: var(--themeColor);
+  font-weight: bold;
+  padding: 20rpx;
+  border-top: solid #ebebeb 16rpx;
+  border-bottom: solid 4rpx #eee;
+}
+.goods_info .goods_info_content {
+  padding-top: 6rpx;
+}
+.btm_tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  background-color: #fff;
+  border-top: 2rpx solid #ccc;
+}
+.btm_tool .tool_item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  position: relative;
+}
+.btm_tool .tool_item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.btm_tool .tool_item .tool_item_icon {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 5%;
+  background-color: var(--themeColor);
+}
+.btm_tool .btn_cart {
+  flex: 2;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ffa500;
+}
+.btm_tool .btn_buy {
+  flex: 2;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #fff;
+  background-color: #eb4450;
+}

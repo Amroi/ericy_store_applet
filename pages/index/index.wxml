@@ -1,0 +1,66 @@
+<view class="pyg_index">
+	<!-- 搜索框 -->
+	<SearchInput></SearchInput>
+
+	<!-- 轮播图 -->
+	<!-- 
+		1. swiper标签默认样式 width：100% height：150px 
+		2. image默认样式 width：320px height：240px
+		3. 原图的宽高：750px*340px
+		4. swiper宽度 / swiper高度 = 原图宽度 / 原图高度 ; =>定swiper高度
+		5. 得出swiper高度应设置为 340rpx
+		-->
+	<view class="index_swiper">
+		<swiper autoplay interval="1500" circular indicator-dots>
+			<swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+				<navigator url="{{item.navigator_url}}">
+					<image src="{{item.image_src}}" mode="widthFix" />
+				</navigator>
+			</swiper-item>
+		</swiper>
+	</view>
+
+	<!-- 导航栏 -->
+	<view class="index_cate">
+		<navigator 
+			wx:for="{{catesList}}" 
+			wx:key="name" 
+			url="/pages/category/index"
+			open-type="switchTab"
+		>
+			<image mode="widthFix" src="{{item.image_src}}" />
+		</navigator>
+	</view>
+
+	<!-- 楼层 -->
+	<view class="index_floor">
+		<view 
+			class="floor_group" 
+			wx:for="{{floorList}}"
+			wx:for-item="item1"
+			wx:for-index="index1" 
+			wx:key="index"
+		>
+			<!-- 标题 -->
+			<view class="floor_title">
+				<image src="{{item1.floor_title.image_src}}" mode="widthFix"/>
+			</view>
+
+			<!-- 内容:图片列表 -->
+			<view class="floor_list">
+				<navigator 
+					wx:for="{{item1.product_list}}"
+					wx:for-item="item2"
+					wx:for-index="index2"
+					wx:key="name"
+					url="{{item2.navigator_url}}"
+				>
+					<image mode="{{index2 === 0?'widthFix' : 'scaleFill'}}" src="{{item2.image_src}}" />
+				</navigator>
+			</view>
+		
+		</view>
+	
+	</view>
+
+</view>

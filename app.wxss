@@ -1,0 +1,29 @@
+@import './styles/iconfont.wxss';
+
+/* 初始化设置(小程序不支持 通配符 *) */
+page,view,text,swiper,swiper-item,image,navigator{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;	
+}
+
+/* 
+主题颜色 通过变量的方式实现
+1. less 中存在 变量这个知识
+2. 而原生的css和wxss也是支持 变量的
+*/
+page{
+	/* 定义主题颜色 */
+	--themeColor:#eb4450;
+
+	/*
+	定义统一的字体大小  若设计稿的宽度是375px 字体统一大小14px
+	即1px=2rpx  14px=28rpx
+	*/
+	font-size: 28rpx;
+}
+ 
+/* 在移动端一般图片都是继承父级的宽度(父级一般为超链接标签navigator) */
+image {
+	width: 100%;
+}

@@ -1,0 +1,139 @@
+page {
+	background-color: #edece8;
+}
+
+.user_info_wrap {
+	height: 42vh;
+	background-color:	#D3D3D3;
+	.user_img_wrap{
+		position: relative;
+		.user_big {
+			height: 45vh;
+			// 滤镜效果(高清模糊)
+			filter: blur(10rpx);
+		}
+		.user_info {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			.user_icon {
+				width: 150rpx;
+				height: 150rpx;
+				border-radius: 50%;
+			}
+			.user_name {
+				color: #fff;
+				font-size: 38rpx;
+				margin-top: 30rpx;
+			}
+		}
+	}
+
+	.user_no {
+		position: relative;
+		height: 42vh;
+		.user_btn {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			.user_icon {
+				width: 150rpx;
+				height: 150rpx;
+				border-radius: 50%;
+			}
+			.user_nodsc {
+				margin-top: 30rpx;
+				font-size: 38rpx;
+				text-decoration: underline;
+				color: var(--themeColor);
+			}
+		}
+	}
+}
+
+.user_content {
+	position: relative;
+	.user_main {
+		color: #666;
+		padding-bottom: 90rpx;
+		position: absolute;
+		top: -55rpx;
+		width: 92%;
+		left: 50%;
+		transform: translate(-50%);
+
+		.history_wrap {
+			display: flex;
+			text-align: center;
+			background-color: #fff;
+			border-radius: 20rpx;
+			navigator {
+				flex: 1;
+				padding: 15rpx;
+				.his_num {
+					color: var(--themeColor);
+					padding-bottom: 5rpx;
+				}
+			}
+		}
+		
+		.orders_wrap {
+			margin-top: 30rpx;
+			border-radius: 20rpx;
+			background-color: #fff;
+			.orders_title {
+				padding: 20rpx 25rpx;
+				font-size: 32rpx;
+				border-bottom: 1rpx solid #eee;
+			}
+			.orders_content {
+				display: flex;
+				text-align: center;
+				padding: 20rpx;
+				navigator {
+					flex: 1;
+					.iconfont {
+						color: var(--themeColor);
+						font-size: 40rpx;
+					}
+				}
+			}
+		}
+
+		.address_wrap {
+			margin-top: 30rpx;
+			border-radius: 20rpx;
+      background-color: #fff;
+			padding: 20rpx 25rpx;
+			font-size: 32rpx; 
+		}
+
+		.app_info_wrap{
+			margin-top: 30rpx;
+			border-radius: 20rpx;
+			background-color: #fff;
+			font-size: 32rpx;
+      .app_info_item{
+        padding: 20rpx 25rpx; 
+        border-bottom: 1rpx solid #eee;
+      }
+      .app_info_contact{
+        display: flex;
+        justify-content: space-between;
+      }
+		}
+		
+		.recommend_wrap{
+			margin-top: 30rpx;
+			border-radius: 20rpx;
+      background-color: #fff;
+			padding: 20rpx 25rpx; 
+			font-size: 32rpx;
+    }
+
+	}
+}

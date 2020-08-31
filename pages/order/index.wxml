@@ -1,0 +1,30 @@
+
+	<Tabs tabs="{{tabs}}" bind:itemChange="handleItemChange"></Tabs>
+
+	<view class="order_main" 	wx:if="{{orders.length !== 0}}" >
+		
+		<view
+		class="order_item"
+		wx:for="{{orders}}"
+		wx:key="order_id"
+		>
+			<view class="order_no_row">
+				<view class="order_no_text">订单编号</view>
+				<view class="order_no_value">{{item.order_number}}</view>
+			</view>
+			<view class="order_price_row">
+       <view class="order_price_text">订单价格</view>
+       <view class="order_price_value">￥{{item.order_price}}</view>
+     </view>
+     <view class="order_time_row">
+       <view class="order_time_text">订单日期</view>
+       <view class="order_time_value">{{item.create_time_cn}}</view>
+		 </view>
+		 <image class="order_finish_img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598183748689&di=117456834aede25caedafa2d03dad095&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F16%2F08%2F19%2F1357b69b5969b65.jpg" />
+		</view>
+
+	</view>
+
+	<view wx:else class="order_item_no">
+		<image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1152267745,1083789557&fm=26&gp=0.jpg" />
+	</view>

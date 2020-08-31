@@ -1,0 +1,4 @@
+<!-- button标签中的open-type存在获取用户信息的功能 -->
+<button open-type="getUserInfo" type="primary" bindgetuserinfo="handleGetUserInfo">
+	用户信息授权
+</button>

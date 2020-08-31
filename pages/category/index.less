@@ -1,0 +1,64 @@
+page {
+	height: 100%;
+}
+
+.cates {
+	height: 100%;
+	.cates_container {
+		// 视口高度 - 搜索框高度
+		height: calc(100vh - 75rpx);
+		display: flex;
+		
+		.left_menu {
+			// flex布局子项继承父项的高度 宽度下面设置的为父项的2/7
+			flex: 2; 
+			
+			.menu_item {
+				font-size: 30rpx;
+				height: 80rpx;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.active {
+				color: var(--themeColor);
+				border-left: solid 4rpx currentColor;
+			}
+		}
+
+		.right_content {
+			// 宽度下面设置的为父项的5/7
+			flex: 5;
+
+			.goods_group {
+				.goods_title {
+					height: 80rpx;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.delimiter {
+						color: #ccc;
+						padding: 0 10rpx;
+					}
+					
+				}
+				.goods_list {
+					display: flex;
+					flex-wrap: wrap;
+
+					navigator {
+						width: 33.33%;
+						text-align: center;
+						image {
+							width: 50%;
+						}
+						.goods_name {
+						 
+						}
+					}	
+				}
+			}	
+		}
+	}
+}
